@@ -7,32 +7,42 @@ public class Client {
 	private static String company;
 	
 	public Client(){
-		this.id = 0;
-		this.name = "";
-		this.company = "";
-	}
-	
-	public Client(short id){
-		this.id = id;
-		this.name = "";
-		this.company = "";
-	}
-
-	public Client(short id, String name){
-		this.id = id;
-		this.name = name;
-		this.company = "";
+		
 	}
 	
 	public Client(short id, String name, String company){
-		this.id = id;
-		this.name = name;
-		this.company = company;
+		setId(id);
+		setName(name);
+		setCompany(company);
 	}
 	
+	public static short getId() {
+		return id;
+	}
+
+	public static String getName() {
+		return name;
+	}
+
+	public static String getCompany() {
+		return company;
+	}
+
+	public static void setId(short id) {
+		Client.id = id;
+	}
+
+	public static void setName(String name) {
+		Client.name = name;
+	}
+
+	public static void setCompany(String company) {
+		Client.company = company;
+	}
+
 	@Override
 	public String toString() {
-		return this.id + "\t" + this.name + "\t" + this.company;
+		return getId() + "\t" + getName() + "\t" + getCompany();
 	}
 	
 
